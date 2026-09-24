@@ -1,0 +1,132 @@
+/* theme-signature: natcharee-ocean-glass */
+:root {
+    --student-theme-id: natcharee-ocean-glass;
+    --student-primary: #087f8c; --student-bg: #eaf8f8; --student-text: #12343b;
+    --student-page: radial-gradient(circle at 82% 12%, #8cdadd88 0, transparent 30%), linear-gradient(145deg, #eaf8f8, #e9f0ff);
+    --student-surface: rgb(255 255 255 / .76); --student-surface-alt: #d5f0ef; --student-hover: #d9f3f4;
+    --student-border: rgb(8 127 140 / .24); --student-heading: #056570; --student-link: #087f8c;
+    --student-nav: linear-gradient(110deg, rgb(8 127 140 / .88), rgb(37 99 167 / .88)); --student-nav-text: #fff; --student-nav-muted: #dcfbff;
+    --student-nav-shadow: 0 14px 32px rgb(16 90 105 / .20); --student-hero: linear-gradient(135deg, #0f8f9d, #245ba7);
+    --student-hero-text: #fff; --student-hero-border: 1px solid #ffffff66; --student-hero-radius: 20px;
+    --student-card-border: 1px solid rgb(255 255 255 / .86); --student-shadow: 0 18px 45px rgb(16 90 105 / .16);
+    --student-radius: 18px; --student-small-radius: 10px; --student-button-radius: 999px;
+    --student-button: linear-gradient(135deg, #087f8c, #2563a7); --student-button-text: #fff; --student-button-shadow: 0 8px 20px #087f8c33;
+    --student-input: rgb(255 255 255 / .84); --student-input-border: 1px solid #6fb9bf; --student-input-radius: 12px;
+    --student-focus: #087f8c30; --student-table-head: #087f8c; --student-table-head-text: #fff;
+    --student-font: "Segoe UI", "Noto Sans Thai", sans-serif; --student-heading-font: "Segoe UI Semibold", "Noto Sans Thai", sans-serif;
+}
+.navbar { margin: 12px; border: 1px solid #ffffff66 !important; border-radius: 18px; backdrop-filter: blur(15px); }
+.navbar-brand::before { content: "≈ "; color: #bffbff; }
+.card, article { backdrop-filter: blur(12px); }
+.hero::after { content: ""; position: absolute; left: -5%; right: -5%; bottom: -45px; height: 70px; border-radius: 50%; background: #ffffff20; }
+
+:root {
+    --bs-primary: var(--student-primary);
+    --bs-body-bg: var(--student-bg);
+    --bs-body-color: var(--student-text);
+    --bs-border-color: var(--student-border);
+    --bs-link-color: var(--student-primary);
+}
+
+html { min-height: 100%; }
+body,
+body.bg-light {
+    min-height: 100vh;
+    margin: 0;
+    color: var(--student-text) !important;
+    background: var(--student-page) !important;
+    font-family: var(--student-font) !important;
+    line-height: 1.7;
+}
+
+.navbar,
+.navbar.bg-dark {
+    background: var(--student-nav) !important;
+    border-color: var(--student-border) !important;
+    box-shadow: var(--student-nav-shadow);
+}
+.navbar-brand {
+    color: var(--student-nav-text) !important;
+    font-family: var(--student-heading-font) !important;
+    font-weight: 800;
+}
+.navbar .nav-link { color: var(--student-nav-muted) !important; }
+.navbar .nav-link:hover,
+.navbar .nav-link:focus { color: var(--student-nav-text) !important; }
+
+main.container,
+body > main {
+    position: relative;
+    z-index: 1;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: var(--student-heading) !important;
+    font-family: var(--student-heading-font) !important;
+}
+.hero {
+    position: relative;
+    overflow: hidden;
+    color: var(--student-hero-text) !important;
+    background: var(--student-hero) !important;
+    border: var(--student-hero-border) !important;
+    border-radius: var(--student-hero-radius) !important;
+    box-shadow: var(--student-shadow) !important;
+}
+.hero h1, .hero h2, .hero h3 { color: var(--student-hero-text) !important; }
+.card,
+article {
+    color: var(--student-text) !important;
+    background: var(--student-surface) !important;
+    border: var(--student-card-border) !important;
+    border-radius: var(--student-radius) !important;
+    box-shadow: var(--student-shadow) !important;
+}
+.card-header { background: var(--student-surface-alt) !important; }
+.table {
+    --bs-table-bg: var(--student-surface);
+    --bs-table-color: var(--student-text);
+    --bs-table-striped-bg: var(--student-surface-alt);
+    --bs-table-hover-bg: var(--student-hover);
+    border-color: var(--student-border) !important;
+}
+.table thead th {
+    color: var(--student-table-head-text) !important;
+    background: var(--student-table-head) !important;
+}
+.btn-primary {
+    color: var(--student-button-text) !important;
+    background: var(--student-button) !important;
+    border-color: transparent !important;
+    border-radius: var(--student-button-radius) !important;
+    box-shadow: var(--student-button-shadow) !important;
+}
+.btn-primary:hover,
+.btn-primary:focus { filter: brightness(.92); transform: translateY(-1px); }
+.btn-danger, .btn-success, .btn-secondary, .btn-outline-primary {
+    border-radius: var(--student-button-radius) !important;
+}
+.form-control,
+.form-select,
+textarea {
+    color: var(--student-text) !important;
+    background: var(--student-input) !important;
+    border: var(--student-input-border) !important;
+    border-radius: var(--student-input-radius) !important;
+}
+.form-control:focus,
+.form-select:focus,
+textarea:focus {
+    border-color: var(--student-primary) !important;
+    box-shadow: 0 0 0 .25rem var(--student-focus) !important;
+}
+.alert, .badge, .pagination .page-link { border-radius: var(--student-small-radius) !important; }
+.pagination .page-link { color: var(--student-primary); }
+.pagination .active > .page-link { background: var(--student-primary); border-color: var(--student-primary); }
+a { color: var(--student-link); }
+
+@media (max-width: 767.98px) {
+    .navbar .container { align-items: flex-start; gap: .75rem; }
+    .navbar-nav { flex-wrap: wrap; }
+    .hero { padding: 1.5rem !important; }
+    .card, article { border-radius: calc(var(--student-radius) * .8) !important; }
+}
